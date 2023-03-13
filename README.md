@@ -1,4 +1,4 @@
-<h2 align="center">Make It Safer</h2>
+<h2 align="center">Make It Safer ✅</h2>
 <p align="center"><i>Move vulnerabilities away. Make your project <ins>safer</ins>.</i></p>
 
 ### Introduction
@@ -76,7 +76,7 @@ This package is ready to be implemented on automated pipelines and git flow. You
 ### Contributions
 
 - The vulnerabilities fix scripts were made by [taylorho](https://github.com/TaylorHo).
-- The packages updating scripts were made by [wellwelwel](https://github.com/wellwelwel), on the package [packages-update](https://github.com/wellwelwel/packages-update). thanks!
+- The packages updating scripts were made by [wellwelwel](https://github.com/wellwelwel), on the package [packages-update](https://github.com/wellwelwel/packages-update). Thanks!
 
 ### FOSS
 

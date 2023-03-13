@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+
+npm run prettier
+npm run lint:format
+
+npx make-it-safer --latest
+
+git add -A .
