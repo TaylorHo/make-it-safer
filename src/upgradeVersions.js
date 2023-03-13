@@ -5,7 +5,7 @@ import getVersionBy from './getVersions.js';
 
 async function upgradeVersions(args) {
   const path = `${process.cwd()}/package.json`;
-  const packageFile = readFileSync(path, "utf-8");
+  const packageFile = readFileSync(path, 'utf-8');
   const packageJSON = JSON.parse(packageFile);
   const { dependencies, devDependencies } = packageJSON;
   const totalDependencies =
@@ -14,38 +14,29 @@ async function upgradeVersions(args) {
   const hasUpdate = [];
   const hasError = [];
 
-  let largestPackageName = "";
+  let largestPackageName = '';
   let count = 0;
 
   if (!totalDependencies || totalDependencies === 0) {
-    log("No dependencies in package.json 👾");
+    log('No dependencies in package.json 👾');
 
     return;
   }
 
-  const option =
-    args?.[0] && getVersionBy?.[args?.[0]?.replace(/^--/, "")]
-      ? args?.[0]?.replace(/^--/, "")
-      : "latest";
+  const option = args?.[0] && getVersionBy?.[args?.[0]?.replace(/^--/, '')] ? args?.[0]?.replace(/^--/, '') : 'latest';
 
   const compareVersions = async (dependency) => {
-    const dependencyType = dependencies?.[dependency]
-      ? dependencies
-      : devDependencies;
+    const dependencyType = dependencies?.[dependency] ? dependencies : devDependencies;
     const currentVersion = dependencyType[dependency];
-    const operators = currentVersion.replace(/[^^><=~]+/g, "");
+    const operators = currentVersion.replace(/[^^><=~]+/g, '');
 
-    if (dependency.length > largestPackageName.length)
-      largestPackageName = dependency;
+    if (dependency.length > largestPackageName.length) largestPackageName = dependency;
 
     process.stdout.write(
       `\x1b[0G🔎 ${String(++count).padStart(
         String(totalDependencies).length,
-        " "
-      )}/${totalDependencies}   ${dependency.padEnd(
-        largestPackageName.length,
-        " "
-      )}`
+        ' '
+      )}/${totalDependencies}   ${dependency.padEnd(largestPackageName.length, ' ')}`
     );
 
     if (/-/g.test(currentVersion)) {
@@ -55,10 +46,7 @@ async function upgradeVersions(args) {
       return;
     }
 
-    const latestVersion = await getVersionBy[option](
-      dependency,
-      currentVersion
-    );
+    const latestVersion = await getVersionBy[option](dependency, currentVersion);
 
     if (!latestVersion) {
       hasError.push(latestVersion);
@@ -84,19 +72,17 @@ async function upgradeVersions(args) {
   for (const dependency in devDependencies) await compareVersions(dependency);
 
   process.stdout.write(
-    `\x1b[0G🔎 ${String(count).padStart(
-      String(totalDependencies).length,
-      " "
-    )}/${totalDependencies} ✅${"".padEnd(largestPackageName.length, " ")}`
+    `\x1b[0G🔎 ${String(count).padStart(String(totalDependencies).length, ' ')}/${totalDependencies} ✅${''.padEnd(
+      largestPackageName.length,
+      ' '
+    )}`
   );
-  log("\n");
+  log('\n');
 
   writeFileSync(path, `${JSON.stringify(packageJSON, null, 2)}${EOL}`);
 
   hasError.length > 0 && hasUpdate.length > 0 && log();
-  hasUpdate.length > 0
-    ? showUpdated(hasUpdate)
-    : log(`Nothing to be updated ✅\n`);
+  hasUpdate.length > 0 ? showUpdated(hasUpdate) : log(`Nothing to be updated ✅\n`);
 
   process.exit(hasError.length > 0 ? 1 : 0);
 }

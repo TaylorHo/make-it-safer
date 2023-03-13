@@ -10,10 +10,13 @@ async function auditFix() {
       return JSON.parse(await cmd(`npm audit ${type} --no-progress --audit-level=none --json`));
     } catch (error) {
       hasError.push(error);
-      console.error(`❌ Error on executing audit fix:`, error.summary?.split(EOL)[0] || error?.summary || error?.message || error);
+      console.error(
+        `❌ Error on executing audit fix:`,
+        error.summary?.split(EOL)[0] || error?.summary || error?.message || error
+      );
       return null;
     }
-  }
+  };
 
   log(`\n📦 Executing ${sh.bold}packages audit${sh.reset}...\n`);
 
@@ -25,7 +28,6 @@ async function auditFix() {
     const auditRemanescentJSON = await runAuditScan('fix'); // remanescent vulnerabilities after fix
     showFixed(auditResultJSON.vulnerabilities, auditRemanescentJSON.audit.vulnerabilities);
   }
-
 }
 
 export default auditFix;

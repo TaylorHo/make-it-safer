@@ -7,9 +7,8 @@ import upgradeVersions from './upgradeVersions.js';
   const [, , ...args] = process.argv;
 
   if (args?.[0]) {
-    upgradeVersions(args)
+    upgradeVersions(args);
   } else {
     auditFix();
   }
-
 })();

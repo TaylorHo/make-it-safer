@@ -1,6 +1,6 @@
 {
   "name": "make-it-safe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Move vulnerabilities away. Make your project safer.",
   "main": "src/index.js",
   "bin": {
@@ -11,11 +11,15 @@
   "type": "module",
   "scripts": {
     "init": "npm i --ignore-scripts",
-    "update": "npx make-it-safe --update; npm run init"
+    "update": "npx make-it-safe --update; npm run init",
+    "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TaylorHo/make-it-safe.git"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.1"
   },
   "keywords": [
     "vulnerabilities",
