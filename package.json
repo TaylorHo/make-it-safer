@@ -1,11 +1,11 @@
 {
-  "name": "make-it-safe",
+  "name": "make-it-safer",
   "version": "0.1.1",
   "description": "Move vulnerabilities away. Make your project safer.",
   "main": "src/index.js",
   "bin": {
-    "make-it-safe": "src/index.js",
-    "makeitsafe": "src/index.js",
+    "make-it-safer": "src/index.js",
+    "makeitsafer": "src/index.js",
     "mis": "src/index.js"
   },
   "type": "module",

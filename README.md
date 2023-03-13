@@ -1,4 +1,4 @@
-<h2 align="center">Make It Safe</h2>
+<h2 align="center">Make It Safer</h2>
 <p align="center"><i>Move vulnerabilities away. Make your project <ins>safer</ins>.</i></p>
 
 ### Introduction
@@ -9,7 +9,7 @@ This package do this based on `npm audit fix`, but better and ready to be implem
 ### Install
 
 ```shell
-   npm i make-it-safe -D
+   npm i make-it-safer -D
 ```
 
 ---
@@ -17,7 +17,7 @@ This package do this based on `npm audit fix`, but better and ready to be implem
 ### Usage
 
 ```shell
-   npx make-it-safe
+   npx make-it-safer
 ```
 
 ---
@@ -29,25 +29,25 @@ By default, the package fix all known vulnerabilities, but it can be used also t
 #### - Update dependencies to the latest version
 
 ```shell
-   npx make-it-safe --latest
+   npx make-it-safer --latest
 ```
 
 #### - Update dependencies to the latest major version
 
 ```shell
-   npx make-it-safe --major
+   npx make-it-safer --major
 ```
 
 #### - Update dependencies to the latest minor version
 
 ```shell
-   npx make-it-safe --minor
+   npx make-it-safer --minor
 ```
 
 #### - Update dependencies to the latest patch version
 
 ```shell
-   npx make-it-safe --patch
+   npx make-it-safer --patch
 ```
 
 ---
@@ -57,17 +57,17 @@ By default, the package fix all known vulnerabilities, but it can be used also t
 This package is ready to be implemented on automated pipelines and git flow. You can use this way:
 
 - With [Husky](https://www.npmjs.com/package/husky)
-  - `npx make-it-safe && git add -A .` (use on the pre-commit hook)(can delay commit time)
+  - `npx make-it-safer && git add -A .` (use on the pre-commit hook)(can delay commit time)
 - With pipelines
-  - `npx make-it-safe && git add -A . && git commit -m "(ci): fixed vulnerabilities" && git push`
+  - `npx make-it-safer && git add -A . && git commit -m "(ci): fixed vulnerabilities" && git push`
 
 ---
 
 ### Aliases
 
 ```shell
-   npx make-it-safe
-   npx makeitsafe
+   npx make-it-safer
+   npx makeitsafer
    npx mis
 ```
 
