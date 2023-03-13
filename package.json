@@ -1,0 +1,41 @@
+{
+  "name": "make-it-safe",
+  "version": "0.1.0",
+  "description": "Move vulnerabilities away. Make your project safer.",
+  "main": "src/index.js",
+  "bin": {
+    "make-it-safe": "src/index.js",
+    "makeitsafe": "src/index.js",
+    "mis": "src/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "init": "npm i --ignore-scripts",
+    "update": "npx make-it-safe --update; npm run init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaylorHo/make-it-safe.git"
+  },
+  "keywords": [
+    "vulnerabilities",
+    "dependency-management",
+    "dependencies",
+    "security",
+    "packages",
+    "package",
+    "npm",
+    "updater",
+    "update",
+    "registry",
+    "versions",
+    "version",
+    "cli"
+  ],
+  "author": "TaylorHo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TaylorHo/make-it-safe/issues"
+  },
+  "homepage": "https://github.com/TaylorHo/make-it-safe#readme"
+}
