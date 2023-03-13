@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.1]
 
+- Renamed project due to NPM registry availability
+
+## [0.1.1]
+
 - Added prettier configuration.
 - Added Github Actions Workflow to publish NPM package.
 

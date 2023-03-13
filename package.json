@@ -1,6 +1,6 @@
 {
   "name": "make-it-safer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Move vulnerabilities away. Make your project safer.",
   "main": "src/index.js",
   "bin": {
@@ -11,12 +11,12 @@
   "type": "module",
   "scripts": {
     "init": "npm i --ignore-scripts",
-    "update": "npx make-it-safe --update; npm run init",
+    "update": "npx make-it-safer --update; npm run init",
     "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TaylorHo/make-it-safe.git"
+    "url": "git+https://github.com/TaylorHo/make-it-safer.git"
   },
   "devDependencies": {
     "prettier": "^2.8.1"
@@ -39,7 +39,7 @@
   "author": "TaylorHo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TaylorHo/make-it-safe/issues"
+    "url": "https://github.com/TaylorHo/make-it-safer/issues"
   },
-  "homepage": "https://github.com/TaylorHo/make-it-safe#readme"
+  "homepage": "https://github.com/TaylorHo/make-it-safer#readme"
 }
