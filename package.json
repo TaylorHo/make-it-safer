@@ -1,6 +1,6 @@
 {
   "name": "make-it-safer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Move vulnerabilities away. Make your project safer.",
   "main": "src/index.js",
   "bin": {
