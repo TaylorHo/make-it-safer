@@ -1,0 +1,7 @@
+.husky/
+.github/
+.vscode/
+.editorconfig
+.eslintrc.json
+.prettierignore
+.prettierrc

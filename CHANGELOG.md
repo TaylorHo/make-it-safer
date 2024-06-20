@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.4]
+
+- Added NodeJS v20 support
+- Improved Readme.md with information about NodeJS versions
+
 ## [0.1.3]
 
 - Improved Github Actions Workflow

@@ -48,6 +48,9 @@
   ],
   "author": "TaylorHo",
   "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
   "bugs": {
     "url": "https://github.com/TaylorHo/make-it-safer/issues"
   },
