@@ -6,6 +6,8 @@
 This package will fix other package known vulnerabilities by updating the version of the package to a stable, not vulnerable, version.
 This package do this based on `npm audit fix`, but better and ready to be implemented on **automated pipelines**.
 
+It works on NodeJS v14, v16, v18 and v20.
+
 ### Install
 
 ```shell
