@@ -52,7 +52,8 @@ const getLatestMajor = async (packageName, currentVersion) => {
 
 const getLatestVersion = async (packageName) => {
   try {
-    return JSON.parse(await cmd(`npm view ${packageName?.trim()?.toLowerCase()} version --json`))
+    const versions = await getAllVersions(packageName)
+    return versions.pop()
   } catch (error) {
     console.error(`❌ ${packageName}:`, error.message?.split(EOL)[0] || error?.message || error)
     return null

@@ -1,6 +1,6 @@
 {
   "name": "make-it-safer",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Move vulnerabilities away. Make your project safer.",
   "main": "src/index.js",
   "bin": {
@@ -14,8 +14,8 @@
     "init": "npm i --ignore-scripts",
     "update": "npx make-it-safer --update; npm run init",
     "prettier": "prettier --write .",
-    "lint:check": "eslint .  --ext .js",
-    "lint:format": "eslint --fix .  --ext .js"
+    "lint:check": "eslint . --ext .js",
+    "lint:format": "eslint --fix . --ext .js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.3",
-    "make-it-safer": "^0.1.2",
+    "make-it-safer": "^0.1.3",
     "prettier": "^2.8.4"
   },
   "keywords": [
