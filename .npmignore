@@ -1,7 +1,7 @@
-.husky/
+.hooks/
 .github/
 .vscode/
 .editorconfig
-.eslintrc.json
-.prettierignore
-.prettierrc
+biome.json
+tea.yaml
+.gitignore
